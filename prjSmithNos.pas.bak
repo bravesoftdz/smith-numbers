@@ -55,20 +55,13 @@ begin
 end;
 
 var
-  num, startPoint, endPoint: integer;
+  num: integer;
 begin
-  write('Starting point: ');
-  readln(startPoint);
-  write('Ending point: ');
-  readln(endPoint);
-  num:= startPoint;
-  if startPoint < endPoint then
-    repeat
-      inc(num);
-      if CheckSmith(num, GetPrimeFactors(num)) then
-        writeln(num);
-    until  (num = endPoint);
-  writeln('Completed.');
+  num:= 4937775;
+  repeat
+    inc(num);
+  until CheckSmith(num, GetPrimeFactors(num));
+  writeln(num);
   readln;
 end.
 
