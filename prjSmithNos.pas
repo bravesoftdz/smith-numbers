@@ -61,7 +61,10 @@ begin
   readln(startPoint);
   write('Ending point: ');
   readln(endPoint);
-  num:= startPoint;
+  if startPoint > 2 then
+    num:= startPoint
+  else
+    num:= 2;
   if startPoint < endPoint then
     repeat
       inc(num);
